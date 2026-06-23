@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --color-slate-deep: #1A2332;
+  --color-ice-white: #EEF4F8;
+  --color-arctic-blue: #0EA5E9;
+  --color-steel-mid: #4A5568;
+
+  --font-display: var(--font-barlow-condensed), sans-serif;
+  --font-body: var(--font-inter), sans-serif;
+
+  --animate-fade-up: fade-up 0.4s ease-out;
+
+  @keyframes fade-up {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Custom global focus styling */
+*:focus-visible {
+  outline: 2px solid var(--color-arctic-blue);
+  outline-offset: 2px;
+}
+
+/* Slide animation for menu drawer */
+@keyframes slide-in-right {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+
+.animate-slide-in {
+  animation: slide-in-right 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Smooth Accordion Max Height Transition (Pure CSS) */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accordion-content.open {
+  max-height: 500px;
+}

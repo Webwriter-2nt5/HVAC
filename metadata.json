@@ -1,0 +1,6 @@
+{
+  "name": "Arctic Breeze HVAC",
+  "description": "Dallas HVAC Services - Quick, professional AC and heating repair and installation services",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
